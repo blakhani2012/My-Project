@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+</style>
+</head>
+<body>
+
+
+<h2>Static block.</h2>
+ <pre>
+-->static block used initialize static data member.
+-->static block alaways executed before main method.
+
+-->at the time of class loading jvm check for static block         
+   if present than jvm execute it. 
+-->if more than one static block available than jvm exucute sequentially.
+ 
+ </pre>
+ <h2>Use of Static block</h2>
+ <pre>
+ 1.to initialize static data member.
+ 2.If you want execute something before main method then we use static block.
+ 
+ </pre>
+
+
+<h2>Static block Example</h2>
+
+<pre>
+package block;
+
+public class Staticblock 
+{
+    //defining static block
+	static
+	{
+	System.out.println(" 1st static block executed");	
+	}
+	
+	
+	public static void main(String[] args) 
+	{
+	
+	System.out.println("main method executed");
+		
+	}
+	
+	static
+	{
+		System.out.println("second static block executed");
+	}
+	
+}
+
+
+output:
+1st static block executed
+second static block executed
+main method executed
+
+</pre>
+</body>
+</html>

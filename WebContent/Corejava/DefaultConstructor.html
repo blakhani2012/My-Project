@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+</style>
+</head>
+<body>
+<h3>
+
+Default Constructor
+
+</h3>
+<pre>
+
+--> every class must have constructor either user define or compiler define(defaoult consctructor)
+  
+--> constructor define by programmer is known user define constructor.
+    where as constructor define by compiler is known as default constructor.
+    
+</pre>
+<h3>Default constructor Example.</h3>
+<pre>
+
+class Sample2
+ {
+   
+	int k=12;
+	
+	double d;
+	
+ /*	
+   this is a default constructor it defines automatically by compiler and it initialize default value value
+   
+   Sample2()
+	{
+		d=0;
+	}
+	*/
+ }
+public class DefaultC {
+
+	
+	public static void main(String[] args)
+	{
+	System.out.println("**************************");	
+	
+	Sample2  obj1=new Sample2();
+	
+	System.out.println("k value  "+obj1.k);
+	
+
+	System.out.println("d value  "+obj1.d);
+	
+    System.out.println("above d value initialize by compiler");	
+	
+
+	System.out.println("**************************");	
+    	
+	}
+
+}
+</pre>
+</body>
+</html>

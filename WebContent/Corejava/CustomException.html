@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h3>
+Custom Exception
+</h3>
+<pre>
+Java provide throw keyword to generate your own Exception.
+you can generate your own Exception class by Extending another Predefined 
+Exception class.
+
+syntax:
+
+Throw new MyException();
+</pre>
+<h3>Simple program to generate custom Exception</h3>
+<pre>
+package exceptionHandling;
+
+import java.util.Scanner;
+
+//class that extends Throwable
+
+class Myexception extends Throwable
+{
+	
+}
+
+//main class
+public class Throw 
+{
+public static void main(String[] args) 
+{
+	
+	Scanner c=new Scanner(System.in);
+	System.out.println("enter your age");
+	
+	int n=c.nextInt();
+	
+	System.out.println("checking......");
+	
+	if(n<18)
+	{
+		
+		try 
+		{	
+			throw new myexception();
+		}
+		
+		
+		catch (myexception e) 
+		{
+			System.out.println("try next year,your age is not valid");
+		}
+		 
+	}
+	
+	else
+	{
+	 System.out.println("thank you for voting ");
+	}	
+	
+  }
+	
+}
+output:
+
+enter your age
+17
+checking......
+try next year,your age is not valid
+
+
+
+</pre>
+</body>
+</html>

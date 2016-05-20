@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h3>
+
+Constructor chaining
+
+</h3>
+<pre>
+ 
+ -->  Constructor chaining is phenomenon which take place during inheritance 
+      in which sub class constructor make a call to super class constructor,
+      super class constructor call to its super class constructor.
+
+ -->  constructor chaining happen either implicit or explicit
+    
+</pre>
+<h3>
+Constructor chaining Example.
+</h3>
+<pre>
+class demo33
+{
+
+	int k;
+	
+	demo33()
+	{
+		k=10;
+		System.out.println("running demo33 constructor");
+		
+	}
+}	
+class Sample33 extends demo33
+{
+
+	double d;
+	Sample33()
+	{
+		d=12.3;
+		System.out.println("running Sample33 constructor");
+	}
+
+	
+}
+
+class Run33 extends Sample33
+{
+   
+	Run33()
+	{
+	
+		System.out.println("running run33 constructor");
+	}
+	
+}
+
+
+public  class ConstructorChaining 
+{
+
+	public static void main(String[] args)
+	{
+
+     System.out.println("*****************************");
+     
+     Run3 obj1=new Run3();//implicit call made by compiler
+     
+     System.out.println("*****************************");		
+	
+	}	
+}
+
+</pre>
+</body>
+</html>

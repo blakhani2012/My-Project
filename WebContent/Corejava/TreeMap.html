@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h2>
+
+Block
+</h2>
+<pre>
+In java there are a two types of block 
+
+1.static 
+2.non static 
+</pre>
+
+<h2>Static block.</h2>
+ <pre>
+-->static block used initialize static data member.
+-->static block alaways executed before main method.
+
+-->at the time of class loading jvm check for static block         
+   if present than jvm execute it. 
+-->if more than one static block available than jvm exucute sequentially.
+ 
+ </pre>
+ 
+<h2>Non Static block.</h2>
+ <pre>
+-->used to initialize non static data member.
+-->non static block execute each time when object is created.
+
+</pre>
+
+<h2>Example</h2>
+<pre>
+class Blockconcept
+
+{
+	
+	static double W;
+	int c;
+	
+	
+	//non static block
+	
+	{
+		//you can write method in non static block
+		
+		c=11;
+		W=123;//overwrite value of w in non static
+		System.out.println("this is non static block");
+		
+	}
+	
+	
+	
+	
+	void test()
+	{
+		
+		System.out.println("running test method of Blockconcept");
+	}
+	
+	
+	//static block
+	static
+	{	
+		// Cannot make a static reference to the non-static field 
+	    // c=11; // error because it c is non static data member
+	    
+		W=12.55;
+		double d=12.4;
+		final int a=12;
+		System.out.println("this is static block Blockconcept");
+		System.out.println("static block is used to initialize static member of class");
+		
+	}
+	
+}
+public class Block 
+{
+
+	static
+	{
+		System.out.println("this is a static block of main class");	
+	}
+	
+	
+	public static void main(String[] args) 
+	{
+		
+	System.out.println("******************************");
+	
+	Blockconcept x=new Blockconcept();//blockconcept class is loaded
+	
+	Blockconcept x1=new Blockconcept();// creating second instance
+	
+	System.out.println("w value"+x.W);
+	
+	//System.out.println("d value "+x.d);//error because d is local variable
+	
+	
+	System.out.println("**************************");	
+	
+	}
+}
+
+output:
+
+this is a static block of main class
+******************************
+this is static block Blockconcept
+static block is used to initialize static member of class
+this is non static block
+this is non static block
+w value123.0
+**************************
+
+</pre>
+</body>
+</html>

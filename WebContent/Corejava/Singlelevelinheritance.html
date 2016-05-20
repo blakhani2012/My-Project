@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+<style type="text/css">
+pre
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+</style>
+
+
+
+
+</head>
+<body>
+<h3>
+Single level inheritance
+</h3>
+<pre>
+--> in single level inheritance subclass inherit from only one super class 
+</pre>
+
+<h3>Single level inheritance Example</h3>
+<pre>
+
+class demo1
+{
+  int k=12;
+
+  void test()
+   {
+     System.out.println("running test method");	
+   }
+	
+}
+
+class Sample1 extends demo1
+{
+   double d=12.4;
+
+   void disp()
+   {
+    System.out.println("running disp method");	
+   }
+	
+}
+
+
+
+public class Singlelevel 
+{
+	public static void main(String[] args)
+	{
+		
+    System.out.println("**********************");	
+		
+    Sample1 obj1=new Sample1();//now this object have property of both class
+    //so using obj1 you can refer property of both class
+    
+    System.out.println("k value: "+obj1.k);
+    obj1.test();
+    
+    System.out.println("d value: "+obj1.d);
+    obj1.disp();
+    
+   
+    System.out.println("**********************");	
+	}
+	
+}
+
+
+</pre>
+
+
+
+</body>
+</html>

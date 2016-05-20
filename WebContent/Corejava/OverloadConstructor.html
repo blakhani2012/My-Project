@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h2> Constructor overloading</h2>
+
+<pre>
+
+--> in a class we can define any number of constructor is know as overloaded 
+    constructor.
+
+--> whenever we create overloaded constructor argument should be diffrr in
+    terms argument type or argument length.
+
+--> the overloaded constructor are used to create object with different 
+    initialization
+
+--> constructor returns the object address which is constructed by constructor
+    of class. 
+    
+</pre>
+
+<h3>Constrcutor overloading</h3>
+
+<pre>
+package constructor;
+
+public class OverLoadconstructor 
+{
+
+	int a;
+	
+	
+	public OverLoadconstructor() 
+	{
+		System.out.println(a);
+	}
+	
+	OverLoadconstructor(int a)
+	{
+		this();
+		this.a=a;
+		System.out.println(a);
+	}
+}
+
+
+class Mainclass
+{
+	public static void main(String[] args) 
+	
+	{
+		OverLoadconstructor a = new OverLoadconstructor(28);
+	}
+}
+
+output:
+
+0
+28
+
+</pre>
+</body>
+</html>

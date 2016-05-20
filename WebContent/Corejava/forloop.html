@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h3>
+For loop
+</h3>
+
+<pre>
+package basic;
+
+public class ForLoop 
+{
+
+	public static void main(String[] args) 
+	{
+	
+		for(int i=1;i<10;i++)
+		{
+			System.out.println(i);
+		}
+		
+	}
+	
+}
+output:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+
+</pre>
+<h3>For each loop</h3>
+<pre>
+package basic;
+
+import java.util.ArrayList;
+
+public class Foreach 
+
+{
+	public static void main(String[] args) {
+		int a[]={12,2,3,333,};
+		String s[]={"heloo","hiii","hows u"};
+		
+		ArrayList<String> arr1=new ArrayList<String>();
+		
+		arr1.add("helloo");
+		arr1.add("hiiiii");
+		arr1.add("hous u");
+		
+		
+		//PRINTING STRING ARRAY
+		for(String str:arr1)
+		{
+			System.out.println(str);
+		}
+		
+		//PRINTING INTEGER TYPE ARRAY
+		for(int b: a)
+		{
+			System.out.println(b);
+		}
+	}
+
+}
+
+output:
+
+helloo
+hiiiii
+hous u
+12
+2
+3
+333
+
+
+</pre>
+</body>
+</html>

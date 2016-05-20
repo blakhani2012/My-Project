@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+
+
+<h2>parametarized constructor </h2>
+ <pre>
+--> Constructor define with parameter is known as parametarized constructor.
+    parametarized constructor used to pass value in constructor.
+ 
+ </pre>
+ 
+<h2>parametarized constructor Example</h2>
+ <pre>
+package constructor;
+
+public class OverLoadconstructor 
+{
+
+	int a;
+	
+    //parametarized constructor
+    
+	OverLoadconstructor(int a)
+	{
+		this.a=a;
+		System.out.println(a);
+	}
+	
+}
+
+
+class Mainclass
+{
+	public static void main(String[] args) 
+	
+	{
+		OverLoadconstructor a = new OverLoadconstructor(28);
+	}
+}
+
+output:
+28
+</pre>
+
+
+</body>
+</html>

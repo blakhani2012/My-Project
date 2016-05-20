@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h3>
+Java Bean Class
+</h3>
+<pre>
+  --> Java bean class pattern
+      -->private data member
+      -->public constructor
+      -->public getter and setter method
+  
+  -->designing a java class with private data member,public constructor,and 
+     public getter and setter method is known as java bean class.
+     
+  -->the getter method is used to read access and the setter method is used 
+     to provide write access.
+  
+  -->java bean class is good example of encapsulation.
+  
+  -->it is used to built data access object and data transfer object.
+
+</pre>
+<h3>Java Bean clas Example</h3>
+<pre>
+
+class Employee
+{
+
+	private int id;
+	private String name;
+	private double salary;
+	
+	
+	public Employee(int id,String name,double salary)
+	{
+		
+		this.id=id;
+		this.name=name;
+		this.salary=salary;
+	
+	}
+	
+
+	//public getter and setter method
+	
+	public int getid()
+	{
+		return id;
+	}
+	
+	public void setid(int id)
+	{
+		this.id=id;
+	}
+
+	
+	public String getname()
+	{
+		return "bhavesh";
+	}
+	
+	
+	public void setname(String name)
+	{
+		this.name=name;
+	}
+	
+	
+	public double getsalary()
+	{
+		return salary ;
+	}
+	
+	public void setsalary(double salary)
+	{
+		this.salary=salary;
+	}
+	
+}
+
+
+
+
+public class JavaBeanclass
+{
+
+	public static void main(String[] args) {
+		
+		System.out.println("***************************");
+		
+		
+		Employee emp=new Employee(1, "bhavesh", 23.9);
+		
+		System.out.println("Employee id: "+emp.getid());
+		System.out.println("Employee name: "+emp.getname());
+		System.out.println("Employee salary: "+emp.getsalary());
+	
+		
+		System.out.println("***************************");
+		
+		emp.setsalary(2344.23);
+		
+		System.out.println("Employee Salry: "+emp.getsalary());
+	}
+	
+}
+
+
+</pre>
+</body>
+</html>

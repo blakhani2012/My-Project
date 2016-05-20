@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+
+<h3>Runtime polymorphysm</h3>
+  <pre>
+  
+  --> in runtime polymorphysm method body is binded to method implementation at runtime based on instance created.
+   
+  --> this type of binding known as dynamic binding or late binding.
+   
+  --> method overriding is example of runtime polymorphysm.
+   
+  --> to achieve runtime polymorphism we need to full feel following concept
+      1.inheritance
+      2.method overriding
+      3.upcasting
+    
+  --> with the help of runtime polymorphysm u can achieve
+     -generalization
+     -abstraction
+     -loose coupling
+ 
+</pre>
+
+<h3>Step to achieve Runtime polymorphism</h3>
+<pre>
+ 1.object implementation layer
+ 2.object creation layer
+ 3.object utilization layer.
+
+   1.object implementation layer
+
+  --> in this layer object implementation done by using abstraction principle.
+  --> generalize the common behaviour in an interface and provide implementation
+      to specific class
+
+   2.object creation layer
+   
+  --> in this layer the object required is created based on need by using 
+      factory pattern.
+  --> the created object casted to interface type and returned.
+
+   3.object utilization layer.
+   
+  --> in this layer functionality of object is used without knowing how it is
+      implemented.
+  --> object is reference through interface reference variable.
+  
+</pre>
+<h3>Program to achieve Runtime polymorphism</h3>
+<pre>
+public interface Vehicle
+{
+    //GENERALIZE THE COMMON BEHAVIOUR IN INTERFACE
+	
+	void start();
+	void move();
+	void stop();
+
+	
+}
+
+
+class Bike implements Vehicle
+{
+
+    public	void start()
+	 {
+	
+		System.out.println("starting bike");
+	 }
+	
+    public	void move()
+	 {
+		
+		System.out.println("moving bike");
+	 }
+	
+    public void stop()
+	 {
+		System.out.println("stoping bike");
+		
+	 }
+	
+ }
+
+class Car implements Vehicle
+{
+
+	public void start()
+	{
+		System.out.println("starting car");
+	}
+	
+	public void move()
+	{
+		
+		System.out.println("moving car");
+	}
+	
+	public void stop()
+	{
+		System.out.println("stoping car");
+	}
+	
+}
+
+//object creating
+class Person
+{
+
+	Vehicle v;
+	void initvehicle(Vehicle v)
+	{
+		this.v=v;//OBJECT IS CASTED TO INTERFACE TYPE
+		
+	}
+	
+	void compute()
+	{
+		v.start();
+		v.move();
+		v.stop();
+
+	}
+	
+}
+
+//object utilizing
+
+class Mainclass
+{
+public static void main(String[] args)
+{
+
+	System.out.println("*******************************");
+
+	Person p=new Person();
+	
+	
+	//utilizing object functionality without knowing how it is implemented
+	p.initvehicle(new Car());
+	
+	//HERE WE USE CAR OBJECT WITHOUT KNOWING HOW IT IS IMPLEMENTED
+	
+	p.compute();
+	
+	System.out.println("*******************************");
+	
+	p.initvehicle(new Bike());
+	p.compute();
+	
+	
+	System.out.println("*******************************");
+ }
+	
+	
+}
+
+
+
+</pre>
+
+</body>
+</html>

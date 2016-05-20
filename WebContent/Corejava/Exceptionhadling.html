@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+</style>
+</head>
+<body>
+<h3>
+Exception Handling
+</h3>
+<pre>
+ 
+--> Exception is a runtime error that occur due to abnormal condition and it
+   disrupts the normal flow of program and it is necessary to handle it.
+
+--> process of handling the Exception is known as Exception handling.
+  
+--> To handle the Exception java provide try,catch and finally keyword.
+
+
+</pre>
+<h3> How it work </h3>
+<pre>
+
+--> In real time Application your sensitive code where probability to occur exception is more
+    that code we write in try block.
+    
+--> if Exception occur then program flow goes to your catch block based on exception.
+    you can define any number of catch block.
+    
+--> Now our requirement is whether Exception occur or not we want some code that always execute
+    then that code we write in finally block.  
+    ex. in jdbc we write closing some file or object.    
+
+</pre>
+
+<h3>Simple program to handle Exception</h3>
+<pre>
+package exceptionHandling;
+
+public class Sample 
+{
+
+	public static void main(String[] args)
+	{
+	
+		System.out.println("****************************");
+		
+		int a=23;
+		int b=0;
+		
+		
+		try
+		{
+		   int c=a/b;
+		}
+		
+		catch(ArithmeticException e)
+		{
+			System.out.println("exception handled successfully");
+		}
+		
+		finally
+		{
+			System.out.println("this block is always executed ");
+		}
+		
+		System.out.println("**********************************");
+		
+	}
+}
+
+output:
+
+exception handled successfully
+this block is always executed 
+**********************************
+
+</pre>
+</body>
+</html>

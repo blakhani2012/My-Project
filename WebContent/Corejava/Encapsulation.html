@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h3>
+
+Encapsulation
+
+</h3>
+<pre>
+     
+  
+  --> Binding (or wrapping) code and data together into a single unit is 
+      known as encapsulation.
+    
+  --> A java class is the example of encapsulation.
+  
+  --> In java method perfect example of encapsulation.
+  
+  --> Java bean is the fully encapsulated class because all the 
+      data members are private here.
+  
+  --> encapsulation used to provide security.
+    
+    
+    
+ 
+</pre>
+
+<h3>Java Bean clas Example</h3>
+<pre>
+
+class Employee
+{
+
+	private int id;
+	private String name;
+	private double salary;
+	
+	
+	public Employee(int id,String name,double salary)
+	{
+		
+		this.id=id;
+		this.name=name;
+		this.salary=salary;
+	
+	}
+	
+
+	//public getter and setter method
+	
+	public int getid()
+	{
+		return id;
+	}
+	
+	public void setid(int id)
+	{
+		this.id=id;
+	}
+
+	
+	public String getname()
+	{
+		return "bhavesh";
+	}
+	
+	
+	public void setname(String name)
+	{
+		this.name=name;
+	}
+	
+	
+	public double getsalary()
+	{
+		return salary ;
+	}
+	
+	public void setsalary(double salary)
+	{
+		this.salary=salary;
+	}
+	
+}
+
+
+
+
+public class JavaBeanclass
+{
+
+	public static void main(String[] args) {
+		
+		System.out.println("***************************");
+		
+		
+		Employee emp=new Employee(1, "bhavesh", 23.9);
+		
+		System.out.println("Employee id: "+emp.getid());
+		System.out.println("Employee name: "+emp.getname());
+		System.out.println("Employee salary: "+emp.getsalary());
+	
+		
+		System.out.println("***************************");
+		
+		emp.setsalary(2344.23);
+		
+		System.out.println("Employee Salry: "+emp.getsalary());
+	}
+	
+}
+
+</pre>
+</body>
+</html>

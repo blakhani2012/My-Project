@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h3>
+
+ARRAYLIST
+</h3>
+<pre>
+-->>Arraylist
+  
+--arraylist is a implementation class of list interface.
+ 
+Arraylist implemenet marker interface
+
+	-->Serialize
+	-->Cloneable
+	-->Radom access
+
+ Arraylist built on re-sizable array data structure.
+ 
+--> Arralist grows with a formula.
+       
+       new capacity=(old capacity*3/2)+1
+
+-->arraylist class has 3 overload constructor.
+
+1.no arg constructor
+2.int arg constructor
+3.collection type arg constructor.
+ 
+</pre>
+
+<h2>when to use Arraylist</h2>
+<pre>
+-->Arraylist preserve insertion order.
+-->In arraylist each element has index so searching is easy if index is known.
+-->duplicate object insertion is allowed
+-->null insertion is allowed.
+
+so if you want above functionality then arraylist is preferable.
+
+</pre>
+<H2>Example of Arraylist</H2>
+
+<pre>
+
+package collectionConcept;
+
+import java.util.*;
+
+ class Arraylist2
+ { 
+	 
+ public static void main(String args[]){  
+   
+  ArrayList<String> al=new ArrayList<String>();//creating arraylist  
+  al.add("Ravi");//adding object in arraylist  
+  al.add("Vijay");  
+  al.add("Ravi");  
+  al.add("Ajay");  
+  
+  Iterator itr=al.iterator();//getting Iterator from arraylist to traverse elements  
+
+  while(itr.hasNext())
+  {  
+   System.out.println(itr.next());  
+  }  
+  
+ }  
+}  
+
+
+</pre>
+<h2>Diffrent ways to retrieve arraylist element</h2>
+<pre>
+1. using for loop
+2. using for each loop
+3. Using Iterator
+4. Using Listiterator
+</pre>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h3>
+
+Singleton class
+
+</h3>
+<pre>
+  
+  --> singleton class is as one of the design pattern
+  
+    1.make constructor private
+       --restricting object creation
+   
+    2.static method
+       --to get instance method
+  
+  
+  --> singleton class is a design pattern which is used to design the class
+      such a way that class produce only one instance only given point of time.
+  
+  --> we can not create more than one instance of singleton class.
+  
+  --> in singleton class design
+       -->private constructor
+       -->public static method which is responsible to return instance of its own class
+  
+  -->the static method should have necessary logic to create only one instance.
+
+</pre>
+
+<h3>Program for Singleton class</h3>
+
+<pre>
+
+class Calculator
+{
+	private static int count;
+	
+    private static Calculator ref1;
+    
+	private Calculator()
+	{
+		System.out.println(count);
+		System.out.println("creating calculator instance");
+		count++;
+	}
+	
+	
+	void devide(int n1,int n2)
+	{
+		
+		System.out.println("deviding "+n1 +" by "+n2);
+		int res=n1/n2;
+		System.out.println("result is: "+res);
+		
+	}
+	
+	static Calculator getinstance()
+	{
+	
+		if(count==0)
+	
+		{
+			
+			ref1=new Calculator();	
+	
+		}
+	
+	return ref1;
+		
+	}
+	
+}
+
+public class Singleton 
+{
+
+	public static void main(String[] args) 
+	{
+	
+		System.out.println("************************");
+		
+		Calculator calc1=Calculator.getinstance();
+	
+		calc1.devide(24, 6);
+		
+		System.out.println("************************");
+		
+	}
+	
+	
+}
+
+</pre>
+
+</body>
+</html>

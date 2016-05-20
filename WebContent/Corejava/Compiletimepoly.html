@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h3>
+
+Compiletime polymorphism
+</h3>
+<pre>
+
+--> in compiletime polymorphysm method declaration is binded to method implementation at the time of  compilation by compiler.
+  
+--> this type of binding is known as static binding or early binding.
+  
+--> the compile time binding happen for static method,final method and  overload method.
+  
+--> the binding done at compile time can not be re-binded.
+  
+--> example of compiletime polymorphism
+    ~method overloading
+    ~constructor overloading
+    ~static method and final method
+ </pre> 
+ 
+<h3>Example of Compile time polymorphism</h3>
+<pre>
+
+class Demo12
+{
+
+  	void test()
+	
+	{
+		
+		System.out.println("running no arg test method");
+	}
+	
+	void test(int arg)
+	{
+		
+		System.out.println("running int arg test method");
+		
+	}
+    
+	static void test(double arg1)//static method
+	{
+		
+		System.out.println("running double arg static test method");
+	}
+	
+	
+}
+
+
+public class CompiletimePolymorphysm
+{
+	public static void main(String[] args) {
+		
+		System.out.println("*************************");
+		
+		Demo12 obj1=new Demo12();
+		
+		obj1.test();//calling no arg test method
+		
+		obj1.test(10);// calling int arg test method
+		
+		System.out.println("*************************");
+		
+		Demo12.test(12.4);//calling static test double arg method
+		
+		
+		System.out.println("**************************");
+					
+	}
+}
+output:
+
+*************************
+running double arg static test method
+**************************
+
+
+</pre>
+
+</body>
+</html>

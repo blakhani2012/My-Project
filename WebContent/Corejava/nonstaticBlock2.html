@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+</style>
+</head>
+<body>
+
+<h2>Non Static block.</h2>
+ <pre>
+-->used to initialize non static data member.
+-->non static block execute each time when object is created.
+
+</pre>
+ <h2>Use of Non Static block</h2>
+ <pre>
+ 1.to initialize non static data member.
+ 
+ </pre>
+
+
+<h2>Non Static block Example</h2>
+
+<pre>
+package block;
+
+import thread.mainclass;
+
+public class Nonstaticblock 
+{
+
+	
+	//defining non static block
+	{
+		
+		System.out.println("running non static block");
+		
+	}
+	
+	public static void main(String[] args) 
+	{
+	
+		
+		System.out.println("main method executed");
+		
+		//craeting instance
+		Nonstaticblock b1=new Nonstaticblock();
+		
+		//creating second instance
+		Nonstaticblock b2=new Nonstaticblock();
+		
+	}
+
+}
+
+
+output:
+
+main method executed
+running non static block
+running non static block
+
+
+</pre>
+</body>
+</html>

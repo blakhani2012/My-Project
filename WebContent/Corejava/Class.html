@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h3>
+
+CLASS
+
+</h3>
+<pre>
+    
+    
+ --> Class is a definition block which define state and behaviour  of object   
+    
+ --> Non static data member defines the state of object.  
+    
+ --> Non static function member define behaviour of object.  
+
+
+</pre>
+<h2>Member of Class</h2>
+<pre>
+
+Class has two types of member
+  1.static member
+  2.non static member
+  </pre>
+  
+  <h2>static member</h2>
+  <pre>
+  --> using static keyword you can define static data member or function member
+  
+  --> static member always associated with a class.
+      so it refer through class.
+
+  --> when you declare member as static then only one copy created in memory 
+      and that is modifiable.
+      
+  --> whenever we want only single copy we go through static member.
+    
+  --> static member are also used to share data or function across object.  
+ 
+ </pre>
+ 
+ <h2> non static member.</h2>
+ <pre>
+  
+  --it declare without static keyword.
+  
+  --non static member associated with an instance. Hence we need    to create instance in order to non static data member.
+  
+  --when ever we create instance of class, copy of class created in memory(only non static member)
+    
+  --modifying the data member of one instance will not affect to other instance.  
+
+</pre>
+<h2>How to access static  member</h2>
+<pre>
+package object;
+
+import thread.mainclass;
+
+public class Static 
+{
+
+	static int id=50;
+	static String name="bhavesh";
+	
+	public static void main(String[] args) 
+	{
+	
+		//accessing static member
+		
+		System.out.println("Hello "+Static.name);
+		
+		System.out.println("your id is "+Static.id);
+		
+	}
+	
+}
+
+output:
+
+Hello bhavesh
+your id is 50
+
+</pre>
+
+<h2>How to access Non static member</h2>
+<pre>
+package object;
+
+public class A 
+{
+
+	//non static member
+	int k=10;
+	
+	public static void main(String[] args) 
+	{
+		A a=new A();
+		
+		//accessing non static property
+		System.out.println("k value "+a.k);
+		
+	}
+}
+
+output:
+k value 10
+</pre>
+</body>
+</html>

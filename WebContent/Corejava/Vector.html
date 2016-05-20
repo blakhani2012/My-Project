@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h2>Vector</h2>
+   
+   <pre>
+   -->vector is implementation class of list interface
+   
+   -->vector implements three marker interface
+     --serializable
+     --clonable
+     --random acccess
+   
+   -->vector is a legacy class which is introduced in java 1.0
+   
+   -->all method in vector is synchronized so it is thread safe class.
+   
+   -->whenever we want to achieve thread safety we go through vector.
+   
+   -->vector grows  by doubling the capacity.     
+
+</pre>
+<h2>Example of Vector</h2>
+<pre>
+package collectionConcept;
+/*
+ * -->Vector
+ * 
+ * --vector is implementation class of list interface
+ * 
+ * --vector implements three marker interface
+ *   --serializable
+ *   --clonable
+ *   --random acccess
+ * 
+ * --vector is a legacy class which is introduced in java 1.0
+ * 
+ * --all method in vector is synchronized so it is thread safe class.
+ * 
+ * --whenever we want to achieve thread safety we go through vector.
+ * 
+ * --vector grows  by doubling the capacity.
+ * 
+ */
+
+
+import java.util.Vector;
+
+public class Vector1
+{
+ public static void main(String[] args)
+ {
+	System.out.println("*************************");
+	
+	     Vector a =new Vector();
+          a.add("abhilash");
+          a.add("bhavesh");
+          a.add("rohit");
+          a.add("hardik");
+          a.add("jspiders");
+         
+
+          
+       System.out.println(a.size());
+       
+       
+       //setting value at index 4
+         a.set(4, "abhilash");
+
+    for (int i = 0; i < a.size(); i++)
+    {
+	 
+    	System.out.println(a.get(i));
+    }
+
+ }
+
+}
+
+
+output:
+
+*************************
+5
+abhilash
+bhavesh
+rohit
+hardik
+abhilash
+
+</pre>
+</body>
+</html>

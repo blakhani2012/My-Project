@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h2>
+
+Throws
+</h2>
+<pre>
+--> Throws is used to propagate the Exception.
+
+--> you can write throws keyword at the time of method declaration.
+
+--> you have handle that Exception at the time of calling that method.
+
+--> throws is class type it means after throws you have to write Exception class.
+
+</pre>
+
+<h2>Program using throws</h2>
+
+<pre>
+package exceptionHandling;
+
+
+class Demo123
+{
+
+	void printnumber(int n,int m) throws InterruptedException 
+	{
+		
+		for(;n<=m;n++)
+		{
+			System.out.println(n);
+			Thread.sleep(1000);
+			
+			
+		}
+	}
+}
+
+
+public class UseOfThrows
+{
+public static void main(String[] args) 
+{
+
+	System.out.println("****************************");
+	
+     Demo123 obj1=new Demo123();	
+    
+    	 
+     try 
+      {
+		obj1.printnumber(1, 5);
+	  } 
+     
+     catch (InterruptedException e) 
+	   {
+		e.printStackTrace();
+	   }
+     
+    
+     
+	System.out.println("*****************************");
+  }
+
+}
+
+output:
+
+****************************
+1
+2
+3
+4
+5
+*****************************
+
+</pre>
+</body>
+</html>

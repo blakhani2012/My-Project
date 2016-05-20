@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h2>
+Object
+</h2>
+<pre>
+   
+  -->an entity which have state and behaviour is known as object.
+     state defines characteristic of object and behaviour defines 
+     functionality of object
+
+  -->an object is a copy of class each time we create an object 
+     a copy of  class will be created
+     
+  -->In the World of java each and everything is Object.   
+
+</pre>
+<h2>Object Example</h2>
+<pre>
+Let's consider Notebook as object and understand the state and behaviour 
+of Notebook.
+
+
+class Notebook
+
+ {
+	
+	//characteristic of notebook
+	
+	String brand;
+	int pages;
+	double price;
+	
+	
+	//functionality of notebook
+	
+	void open()
+	{
+		System.out.println("open the book");
+	}
+	void read()
+	{
+		System.out.println("reading book");	
+	}
+	void close()
+	{
+		System.out.println("closing book");
+	}
+	
+	
+	//method to get details of notebook
+	
+	void bookdetail()
+	{
+		
+		System.out.println("brand name: "+brand);
+		
+		System.out.println("number of pages: "+pages);
+		
+		System.out.println("price of notebook: "+price);
+	}
+	
+ }
+
+public class ObjectExample {
+
+
+	public static void main(String[] args)
+	{
+        //creating instance of notebbok
+		Notebook mbook=new Notebook();
+		
+		mbook.brand="class mate";
+		mbook.pages=200;
+		mbook.price=23.5;
+		
+		mbook.bookdetail();//calling function to get notebook detail
+	
+		System.out.println("************************");
+		
+		
+		// creating second instance of notebook
+		
+		Notebook mbook1=new Notebook();
+		
+		mbook1.brand="camel";
+		mbook1.pages=230;
+	    mbook1.price=20;
+		
+		mbook1.bookdetail();//calling function to get notebook detail
+	}
+
+}
+
+output:
+
+brand name: camel
+number of pages: 230
+price of notebook: 20.0
+
+
+
+</pre>
+</body>
+</html>

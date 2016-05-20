@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+</style>
+</head>
+<body>
+<h3>
+
+Constructor calling
+
+</h3>
+<pre>
+
+  --> whenever subclass inherit proprty of superclass, subclass constructor should make a call to 
+      the superclass constructor either implicit or explicit call is made by super() statement.
+
+  --> If compiler makes call than its called implicit call
+
+  --> if programmer makes call to super class constructor using 
+      super() statement than its called explicit call
+      
+      
+</pre>
+<h3>Example of implicit Constructor call</h3>
+<pre>
+
+class demo3
+{
+
+	int k;
+	
+	demo3()
+	{
+		k=10;
+		System.out.println("running demo3 constructor");
+		
+	}
+}	
+class Sample3 extends demo3
+{
+	double d;
+	Sample3()
+	{
+		d=12.3;
+		System.out.println("running Sample3 constructor");
+	}
+}
+
+class Run3 extends Sample3
+{
+   
+	Run3()
+	{
+	
+		System.out.println("running run3 constructor");
+	}
+	
+}
+
+
+public  class ConstructorCall 
+{
+
+	public static void main(String[] args)
+	{
+
+     System.out.println("*****************************");
+     
+     Run3 obj1=new Run3();//implicit call made by compiler
+  	
+     System.out.println("*****************************");		
+	
+	}
+	
+}
+</pre>
+</body>
+</html>

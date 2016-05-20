@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h2>PriorityQueue</h2>
+ 
+ <pre>
+ 
+   --> priority queue is an implementation class of queue interface.
+   
+   --> it stores objects in ascending order based on some priority.
+   
+   --> it store only homogeneous element which are of comparable type.
+   
+   --> constructor of priority queue
+   
+        -->zero parameter
+           priorityqueue()
+           
+        -->comparator object type
+           priorityqueue(comparator c1)       
+            
+        
+</pre>
+<h3>PriorityQueue Example</h3>
+<pre>
+
+public class Priorityqueue 
+{
+
+	public static void main(String[] args)
+	
+	{
+		System.out.println("***************************");
+		
+		PriorityQueue q1=new PriorityQueue<>(2);
+		
+		q1.add("bhavesh");
+		q1.add("hardik");
+		q1.add("rohit");
+		q1.add("abhilash");
+		q1.add("vivek");
+		
+        //q1.add(23);
+		System.out.println("queue size: "+q1.size());
+		
+		Object obj2=q1.peek();
+		
+		System.out.println(q1.size());
+
+		
+		Object obj1=q1.poll();
+		while(obj1!=null)
+		{
+			
+			System.out.println(obj1);
+			
+			obj1=q1.poll();
+			
+		}
+		
+		//after emptying queue output is null
+	    System.out.println(q1.poll());
+	
+		
+		System.out.println("***************************");
+	}
+	
+}
+
+output:
+
+***************************
+queue size: 5
+5
+abhilash
+bhavesh
+hardik
+rohit
+vivek
+null
+***************************
+
+
+
+</pre>
+
+</body>
+</html>

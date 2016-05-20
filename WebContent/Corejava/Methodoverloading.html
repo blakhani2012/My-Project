@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+</style>
+</head>
+<body>
+<h3>
+METHOD OVERLOADING
+</h3>
+<pre>
+                         
+  -->In a class defining multiple method with a same name and different parameter is known as method overloading
+ 
+  -->parameter should differ either in terms of parameter type  or parameter length     
+ 
+  --> in a class we can overload both static and non-static method
+  
+  -->the overloaded method are invoked based on the argument
+  
+  -->any two method having same name should not be match of in terms of argument
+  
+  -->method overloading is used to achieve compile time polymorphism
+  
+  <b>when developing application if we come across an operation which has to done to the different parameter 
+     than we go for method overloading</b>
+     
+</pre>
+<h3>
+Methodoverloading Example
+</h3>
+<pre>
+class Demo1
+{
+
+  	void test()
+	
+	{
+		
+		System.out.println("running no arg test method");
+	}
+	
+	void test(int arg)
+	{
+		
+		System.out.println("running int arg test method");
+		
+	}
+    
+	static void test(double arg1)//static method
+	{
+		
+		System.out.println("running double arg static test method");
+	}
+	
+	
+}
+
+
+public class MethodOverloading
+{
+	public static void main(String[] args) {
+		
+		System.out.println("*************************");
+		
+		Demo1 obj1=new Demo1();
+		
+		obj1.test();//calling no arg test method
+		
+		obj1.test(10);// calling int arg test method
+		
+		System.out.println("*************************");
+		
+		Demo1.test(12.4);//calling static test double arg method
+		
+		
+		System.out.println("**************************");
+					
+	}
+}
+
+
+output:
+
+*************************
+running no arg test method
+running int arg test method
+*************************
+running double arg static test method
+**************************
+
+</pre>
+</body>
+</html>

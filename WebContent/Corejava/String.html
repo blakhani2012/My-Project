@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h2>
+
+String class</h2>
+<pre>
+  
+  --defining string as class,defining java.lang package which is used to
+    store string value.
+  
+  -->it is a final class.
+  
+  --> it is immutable class.
+      means once you create object you can not change state of object. 
+  
+  -->it is a thread safe class.
+     --single thread to run
+  
+  -->string class implement comparable interface.hence string object can be
+     sorted.
+     
+  -->string has a overloaded constructor
+     --no arg constructor
+     --string type arg constructor
+     --char array type
+  
+  -->in string class following method of object class is override.
+      --tostring()
+      --hashcode()
+      --equals(object o)
+  
+  -->string class can be created using
+       1.using new operator
+       2.without use of new operator.
+       
+  </pre> 
+  
+  <h2>how memory allocation done in memory.</h2>
+  <pre>
+  --> string object created in java will be stored in string pool area of heap.
+     this area is devided in two types of area.
+      1.string constant pool area
+      2.string non contant pool area.
+     
+  --> constant pool area will never allow duplicate object.   
+      whereas non constant pool area will allow duplicate object.
+       
+  --> the object created by new operator will always loaded in not
+      constant pool area.
+  --> the object created without new operator will be loaded in
+      constant pool area.
+   
+</pre>
+
+<h3>String Function</h3>
+<pre>
+package basic;
+
+public class StringA {
+
+	public static void main(String[] args)
+	{
+
+		System.out.println("in java String is a class");
+
+		//here String is class.it is immutable.
+		
+		String name="bhavesh";//only one object is created. 
+		
+		//use of different String function
+		
+		System.out.println(name.length()); //to find length of string
+		
+		System.out.println(name.charAt(0)); //find char from Specific index
+		
+		System.out.println(name.contains("bh"));//return true or false
+		
+		System.out.println(name.substring(2));//printing string after 2nd index
+		
+		System.out.println(name.toUpperCase());//convert string into uppercase
+		
+	
+		System.out.println("********************");
+		
+		//use of split
+		
+		String s1="java j2ee sql jsp servlet";
+				
+		String[] language=s1.split(" ");
+		
+		for(int i=0;i < language.length;i++)
+		{
+			System.out.println(language[i]);
+		}
+	
+	}
+
+}
+
+output:
+
+in java String is a class
+7
+b
+true
+avesh
+BHAVESH
+********************
+java
+j2ee
+sql
+jsp
+servlet
+
+
+</pre>
+</body>
+</html>

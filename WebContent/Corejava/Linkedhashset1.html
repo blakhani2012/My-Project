@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h2>Linkedhashset</h2>
+   
+   <pre>
+   -->Linkedhashset is class which sub class of hashset.
+   
+   -->Linked hashset is implemented based on hybrid data structure(hashing+linkedlist)
+   
+   -->Linkedhash set preserve insertion order
+   
+   -->Duplicate object are not allowed,null insertion is allowed.    
+   
+  </pre>  
+    
+<h3>LinkedHashset Example</h3>
+<pre>
+public class Linkedhashset
+{
+
+   public static void main(String[] args)
+	{
+		
+	
+	 LinkedHashSet<String> h1=new LinkedHashSet<>();
+    
+	h1.add("milan");
+	h1.add("vivek");
+	h1.add("abhi");
+	h1.add("bl");
+
+    // h1.remove("milan");
+	// h1.clear();
+	
+    System.out.println("size of linked hashset "+h1.size());
+	   
+	   
+	for(Object o1:h1)
+	{
+		System.out.println(o1);
+	}
+
+  }
+}
+
+output:
+
+size of linked hashset 4
+milan
+vivek
+abhi
+bl
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+pre,h3,h4
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+
+</style>
+</head>
+<body>
+<h2>
+
+Throw
+</h2>
+<pre>
+--> Throw is used to generate custom exception.
+
+--> you can write throw keyword inside method.
+ 
+--> throw is object type it means after throw you have create object of Exception class.
+
+</pre>
+
+<h2>Program to generate custom exception using throw</h2>
+
+<pre>
+package exceptionHandling;
+
+import java.util.Scanner;
+
+//class that extends Throwable
+
+class Myexception extends Throwable
+{
+	
+}
+
+//main class
+public class Throw 
+{
+public static void main(String[] args) 
+{
+	
+	Scanner c=new Scanner(System.in);
+	System.out.println("enter your age");
+	
+	int n=c.nextInt();
+	
+	System.out.println("checking......");
+	
+	if(n<18)
+	{
+		
+		try 
+		{	
+			throw new myexception();
+		}
+		
+		catch (myexception e) 
+		{
+			System.out.println("try next year,your age is not valid");
+		}
+		 
+	}
+	
+	else
+	{
+	 System.out.println("thank you for voting ");
+	}	
+	
+  }
+	
+}
+output:
+
+enter your age
+17
+checking......
+try next year,your age is not valid
+
+</pre>
+</body>
+</html>

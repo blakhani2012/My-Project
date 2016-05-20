@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+
+pre
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+div.cities {
+    color:black;
+    margin:0px;
+    padding:0px;
+    position:absolute;
+    left:120px;
+}	
+
+
+</style>
+
+
+</head>
+<body>
+<div class="cities">
+<h3>
+Arrays
+</h3>
+<pre>
+
+ -->Java provides a data structure, the array, which stores a
+fixed-size sequential collection of elements of the same type.
+An array is used to store a collection of data, but it is often
+more useful to think of and array as a collection of variables
+of the same type.
+
+ Note:
+ 
+ -->array is collection of element.
+ -->array hold element of same type.
+ -->array is fixed in size.
+ 
+ </pre>
+ 
+<h3>
+
+Sample program
+
+</h3>
+
+<pre>
+package array123;
+
+public class IntegerArrays 
+{
+
+	public static void main(String[] args) 
+	{
+	
+		int a[]={1,2,3,4,6,72};//declaring Array
+		
+		System.out.println("Array elements")
+		
+		for(int i=0;i&lta.length;i++)
+		{
+			System.out.println(a[i]);
+			
+		}
+		
+	}
+	
+}
+
+Output:
+
+Array elements
+1
+2
+3
+4
+6
+72
+
+<h3>
+Another Way to declare Arrays
+
+</h3>
+
+Syntax:
+
+Datatype variableName[]=new DataType[Size];
+
+It is necessary to give  size of Array if you not give then it will give an error.
+
+package array123;
+
+public class ArrayExample 
+{
+
+	public static void main(String[] args) 
+	{
+	
+		int a[]=new int[5];//declaring array of size 5
+		
+		
+		//assigning value to array
+		
+		a[0]=23;
+		a[1]=24;
+		a[2]=11;
+		a[3]=54;
+		a[4]=43;
+			
+		//retrieving element using for loop
+		for(int i=0;i&lta.length;i++)
+		{
+			
+		System.out.println(a[i]);	
+		
+		}
+	}
+}
+
+Output:
+
+23
+24
+11
+54
+43
+
+<h3>
+
+Program to Create Dynamic Arrays
+
+</h3>
+
+package PRoglacLogic;
+import java.util.Scanner;
+
+
+public class DynamicARray
+ {
+
+	
+	public static void main(String[] args) 
+	{
+		Scanner c=new Scanner(System.in);
+		
+		System.out.println("enter howmany element u want to enter");
+        int a=c.nextInt();
+        
+		int arr1[]=new int[a];
+		
+		
+		for(int i=0;i&ltarr1.length;i++)
+		{
+			arr1[i]=c.nextInt();
+		}
+		
+		System.out.println("element are");
+		
+		for(int i=0;i&ltarr1.length;i++)
+		{
+			System.out.println(arr1[i]);
+		}
+	}
+
+}
+
+Output:
+
+enter howmany element u want to enter
+3
+12
+13
+14
+element are
+12
+13
+14
+
+<h3>
+
+Size of Arrays:
+
+</h3>
+
+-->How to Find size of 1D array
+-->How to Find size of 2D array
+-->How to Find size of 3D array
+
+-->Syntax for Declaring 3d Array
+
+package array;
+
+public class Arraylength {
+	
+	public static void main(String[] args) 
+	{
+		 
+		 int[] arr1=new int[5];// 1D array
+		 
+		 int[][] arr2=new int[3][4]; // 2D array
+		
+		
+		 int[][][] arr3= new int[2][3][5]; // 3d Array
+		 
+		 
+		 // 1D array
+		 System.out.println("array length of 1d array= "+arr1.length);
+		 
+		 // 2 D array
+		 System.out.println("2 d  array length="+arr2.length);//number of row
+		 System.out.println("in 2 d array number of column="+arr2[1].length);
+		 
+		 // 3 D array
+		 
+		 System.out.println("3d array length="+arr3.length);
+		 System.out.println("3d array length="+arr3[0].length);
+		 System.out.println("3d array length="+arr3[1].length);
+		 
+		 
+		 // 3d array declaration
+		 int[][] foo = new int[][] {
+			        new int[] { 1, 2, 3 },
+			         new int[] { 1, 2, 3, 4},
+			    };
+
+			    System.out.println(foo.length); //2
+			    System.out.println(foo[0].length); //3
+			    System.out.println(foo[1].length); //4
+		  
+	}
+
+}
+
+
+<h3>
+
+Array is Fixed in size.
+
+</h3>
+
+If you trying to insert element more than size of Array 
+then it will Run time Exception.
+
+
+public class Array 
+{
+	public static void main(String[] args)
+	{
+     
+		int b[]=new int[4];
+		 b[0]=12;
+		 b[1]=13;
+		 b[2]=14;
+		 b[3]=12;
+		 b[4]=12; 
+		 // error array index out of bound because Array Size is 4 
+		 //   and we are trying to insert 5th element
+	 
+		for(int i=0;i&lt4;i++)
+		{
+			System.out.println(b[i]);
+		}
+		
+     System.out.println("*******************************");
+
+
+     }
+
+}
+
+
+Output:
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 4
+	at array.Array.main(Array.java:27)
+
+
+</pre>
+</div>
+</body>
+</html>

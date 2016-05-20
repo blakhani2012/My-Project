@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+
+<style type="text/css">
+
+pre
+{
+
+font-family: 'Segoe UI', Arial, sans-serif;
+
+}
+
+</style>
+
+
+</head>
+<body>
+<h2>
+ABSTRACTION CLASS:
+</h2>
+
+<pre>
+   Abstraction is a process of hiding the class implementation from its 
+utilization. The abstraction specified that do not show how object 
+functionality is implemented but provide an interface to use the 
+functionality.
+
+  In abstract class u can declare
+      -abstract method
+      -concrete method
+      -defining method with method declaration and method body is known as concrete method
+      -static and non static member
+      -u can also declare constructor
+  
+  --> it is not mendetory that abstract class must have abstract method.
+      
+  --> and you can not create an instance of abstract class.    
+  
+  --> abstract keyword can not compile with following keyword.
+      --static
+      --final
+      --private
+
+
+     
+</pre>
+
+
+<h2>ABSTARCT CLASS</h2>
+<pre>
+   
+   --> if u define class as abstarct class then class must have atleast one subclass
+       simply abstract class have no use.
+ 
+   --> you must provide implementation of abstract method in sub class 
+
+   --> if you don't want provide implentation then you must declare subclass as abstarct 
+ 
+ 
+See below Example to understand it.
+ 
+ 
+abstract class Demo2
+{
+
+	abstract void test(int arg);
+	
+	abstract void disp();
+	
+
+}
+
+//you must provide implementation of abstract method in sub class 
+//or if you don't want provide implentation then you must declare subclass as abstarct
+
+
+class Sample2 extends Demo2
+{
+
+	void test(int arg)
+	{
+		
+		System.out.println("running int arg test method");
+	}
+	
+	void disp()
+	{
+	
+		System.out.println("running disp method");
+		
+	}
+	
+}
+
+public class Abstract2
+{
+
+	public static void main(String[] args) 
+	{
+	
+		System.out.println("*******************************");
+		
+		
+         Sample2 obj1=new Sample2();
+         
+         
+		   obj1.test(12);
+		   obj1.disp();
+		
+		
+		System.out.println("*******************************");
+	}
+}
+
+Output:
+
+running int arg test method
+running disp method
+*******************************
+
+</pre>
+
+
+<h2>See Another Example</h2>
+
+
+<pre>
+package abstraction;
+
+abstract class Demo3
+{
+
+	abstract void test(int arg);
+	
+	abstract void disp();
+	
+
+}
+
+//you must provide implementation of abstract method in sub class 
+//or if you don't want provide implentation then you must declare subclass as abstarct
+
+
+abstract class Sample3 extends Demo3
+{
+
+	void test(int arg)
+	{
+		
+		System.out.println("running int arg test method");
+	}
+
+	//disp abstract......
+	
+}
+
+class Sample4 extends Sample3
+{
+
+	void disp()
+	{
+	
+		System.out.println("running disp method");
+		
+	}
+	
+	
+}
+
+public class Abstract3
+{
+
+	public static void main(String[] args) 
+	{
+	
+		System.out.println("*******************************");
+		
+		
+         Demo3 obj1=new Sample4();
+         
+         
+		   obj1.test(12);
+		   obj1.disp();
+		
+		
+		System.out.println("*******************************");
+	}
+}
+
+</pre>
+
+<h3>interview:</h3>
+<pre>
+ 1.can you declare abstarct class as final clsss.?
+ ans: No          
+
+ 2.How ot Access access member of abstract class 
+ ans: define That member as static.....!!
+      because we can not create instance of abstract class
+      so if you define member as static then it can be refer through class.
+ 
+  </pre>
+    
+    <h2>How to Access member of abstract class ?</h2>
+   <pre>
+       
+ abstract class Demo1
+{
+   static int k=12; //static member
+
+   double d=12.4;//non static member
+
+    Demo1()//constructor
+    {
+    	
+	System.out.println("running Demo1 constructor");
+	
+    }
+	
+    static void test() //static method
+    {
+    	System.out.println("running test method");
+    }
+	
+	
+	abstract void disp();//abstract method
+	
+	
+}
+
+
+public class Abstract1
+{
+
+	public static void main(String[] args) 
+	{
+	
+		System.out.println("***************************");
+		
+		
+		Demo1 d1;//creating reference reference variable of Demo1
+		
+		//u can not create instance of Demo1
+		//so we can access only static property because static member associated with class not instance
+		
+		System.out.println("k value: "+Demo1.k);
+		Demo1.test();
+		
+		System.out.println("***************************");
+		
+		
+	}
+	
+}
+ 
+ Output:
+ 
+ k value: 12
+running test method
+***************************
+
+</pre>
+
+
+
+</body>
+</html>
